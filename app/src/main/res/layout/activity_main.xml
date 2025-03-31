@@ -11,8 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        style="@style/CustomToolbar"
-        android:titleTextColor="@color/design_default_color_error"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:title="FileReadWrite" />
 
@@ -27,14 +25,19 @@
             android:id="@+id/btnWriteFile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="WRITE TO FILE" />
+            android:text="WRITE TO FILE"
+            style="@style/Widget.AppCompat.Button" />
+
+
 
         <Button
             android:id="@+id/btnReadFile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="READ FROM FILE"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            style="@style/Widget.AppCompat.Button" />
+
 
         <TextView
             android:id="@+id/tvData"
