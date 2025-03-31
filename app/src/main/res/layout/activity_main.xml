@@ -11,9 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        android:titleTextColor="@android:color/white"
-        app:title="FileReadWrite"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        style="@style/CustomToolbar"
+        android:titleTextColor="@color/design_default_color_error"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="FileReadWrite" />
 
     <!-- Content -->
     <LinearLayout

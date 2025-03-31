@@ -1,8 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- 🟢 Объявление глобального стиля Toolbar -->
+    <style name="CustomToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextColor">@android:color/white</item> <!-- или свой цвет -->
+    </style>
+
+    <!-- 🟢 Тема приложения -->
     <style name="Base.Theme.Lab07" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="toolbarStyle">@style/CustomToolbar</item>
     </style>
 
     <style name="Theme.Lab07" parent="Base.Theme.Lab07" />
