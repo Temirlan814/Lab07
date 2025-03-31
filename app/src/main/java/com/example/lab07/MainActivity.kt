@@ -49,22 +49,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun writeFile(data: String) {
-        val filePath = Environment.getExternalStorageDirectory().absolutePath + "/test.txt"
         try {
-            val fileOutput = FileOutputStream(filePath)
+            val fileOutput = openFileOutput("test.txt", MODE_PRIVATE)
             fileOutput.write(data.toByteArray())
             fileOutput.close()
-            Toast.makeText(this, "Written to $filePath", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "File written", Toast.LENGTH_SHORT).show()
         } catch (e: Exception) {
             e.printStackTrace()
             Toast.makeText(this, "Write failed: ${e.message}", Toast.LENGTH_LONG).show()
         }
     }
 
+
     private fun readFile(): String {
-        val filePath = Environment.getExternalStorageDirectory().absolutePath + "/test.txt"
         return try {
-            val fileInput = FileInputStream(filePath)
+            val fileInput = openFileInput("test.txt")
             val reader = BufferedReader(InputStreamReader(fileInput))
             val content = reader.readText()
             reader.close()
@@ -74,4 +73,5 @@ class MainActivity : AppCompatActivity() {
             "Read failed: ${e.message}"
         }
     }
+
 }
