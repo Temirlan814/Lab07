@@ -1,27 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnWriteFile"
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Write to File" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:titleTextColor="@android:color/white"
+        app:title="FileReadWrite"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <Button
-        android:id="@+id/btnReadFile"
+    <!-- Content -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Read from File"
-        android:layout_marginTop="10dp"/>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvData"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="File content will appear here"
-        android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/btnWriteFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="WRITE TO FILE" />
+
+        <Button
+            android:id="@+id/btnReadFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="READ FROM FILE"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/tvData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="File content will appear here" />
+    </LinearLayout>
 </LinearLayout>
